@@ -1,20 +1,24 @@
 Summary:	X.org video driver for Intel i740 video adapters
 Summary(pl):	Sterownik obrazu X.org dla kart graficznych Intel i740
 Name:		xorg-driver-video-i740
-Version:	1.0.0.1
+Version:	1.0.0.2
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/driver/xf86-video-i740-%{version}.tar.bz2
-# Source0-md5:	eb88ec9afb3c1b84a7bda762ea32bc6c
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-video-i740-%{version}.tar.bz2
+# Source0-md5:	f1bf818701eb2d3136b6157c4ae476de
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-proto-fontsproto-devel
+BuildRequires:	xorg-proto-randrproto-devel
+BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
-BuildRequires:	xorg-xserver-server-devel
+BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -52,6 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc ChangeLog README
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/i740_drv.so
 %{_mandir}/man4/i740.4x*
