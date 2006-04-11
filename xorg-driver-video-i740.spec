@@ -1,12 +1,12 @@
 Summary:	X.org video driver for Intel i740 video adapters
 Summary(pl):	Sterownik obrazu X.org dla kart graficznych Intel i740
 Name:		xorg-driver-video-i740
-Version:	1.0.0.5
+Version:	1.1.0
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/driver/xf86-video-i740-%{version}.tar.bz2
-# Source0-md5:	f8d150297da26db8011b3e3ba86667b0
+Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-i740-%{version}.tar.bz2
+# Source0-md5:	57302e225060a7286ae1a970c87a589b
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -18,7 +18,8 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
-BuildRequires:	xorg-xserver-server-devel >= 0.99.3
+BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
+Requires:	xorg-xserver-server >= 1.0.99.901
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
