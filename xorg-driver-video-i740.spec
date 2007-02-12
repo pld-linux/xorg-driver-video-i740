@@ -1,5 +1,5 @@
 Summary:	X.org video driver for Intel i740 video adapters
-Summary(pl):	Sterownik obrazu X.org dla kart graficznych Intel i740
+Summary(pl.UTF-8):   Sterownik obrazu X.org dla kart graficznych Intel i740
 Name:		xorg-driver-video-i740
 Version:	1.1.0
 Release:	0.1
@@ -25,8 +25,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X.org video driver for video adapters based on Intel i740 chip.
 
-%description -l pl
-Sterownik obrazu X.org dla kart graficznych opartych na uk≥adzie Intel
+%description -l pl.UTF-8
+Sterownik obrazu X.org dla kart graficznych opartych na uk≈Çadzie Intel
 i740.
 
 %prep
